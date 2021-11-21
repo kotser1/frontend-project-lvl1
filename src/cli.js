@@ -5,4 +5,4 @@ const cli = (question) => {
   console.log('Hello, ', name, '!');
 };
 
-export { cli };
+export default cli;

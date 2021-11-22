@@ -7,4 +7,9 @@
 
 ## Игра: "Проверка на чётность"
 
-<script id="asciicast-p8MNhjm2Aid33OCHBBz9pBOKz" src="https://asciinema.org/a/p8MNhjm2Aid33OCHBBz9pBOKz.js" async></script>
+[![asciicast](https://asciinema.org/a/p8MNhjm2Aid33OCHBBz9pBOKz.svg)](https://asciinema.org/a/p8MNhjm2Aid33OCHBBz9pBOKz)
+
+
+## Игра: "Калькулятор"
+
+[![asciicast](https://asciinema.org/a/7vfX3JW0SyJpNL79gBoCYmchB.svg)](https://asciinema.org/a/7vfX3JW0SyJpNL79gBoCYmchB)

@@ -2,13 +2,17 @@ import readlineSync from 'readline-sync';
 import { getRandomNumber, MAX_QUESTIONS } from '../utils.js';
 import cli from '../cli.js';
 
-const isEven = (number) => (number % 2 === 0);
+const playGameCalc = () => {
+  const Actions = {
+    '+': (a, b) => a + b,
+    '-': (a, b) => a - b,
+    '*': (a, b) => a * b,
+  };
 
-const playEvenOrOdd = () => {
   console.log('Welcome to the Brain Games!');
   const name = cli('May I have your name? ');
 
-  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const rules = 'What is the result of the expression?';
   console.log(rules);
 
   let counter = 0;
@@ -16,10 +20,15 @@ const playEvenOrOdd = () => {
   for (let i = 0; i < MAX_QUESTIONS; i += 1) {
     counter += 1;
 
-    const randomNumber = getRandomNumber(0, 100);
-    console.log('Question: ', randomNumber);
+    const randomNumber1 = getRandomNumber(0, 10);
+    const randomNumber2 = getRandomNumber(0, 10);
 
-    const rightAnswer = isEven(randomNumber) === true ? 'yes' : 'no';
+    const operators = Object.keys(Actions);
+    const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
+
+    console.log(`Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`);
+
+    const rightAnswer = Actions[randomOperator](randomNumber1, randomNumber2).toString();
 
     const userAnswer = readlineSync.question('Your answer: ');
 
@@ -37,4 +46,4 @@ const playEvenOrOdd = () => {
   }
 };
 
-export default playEvenOrOdd;
+export default playGameCalc;

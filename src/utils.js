@@ -1,3 +1,5 @@
+const MAX_QUESTIONS = 3;
+
 const getRandomNumber = (min, max, digit = 0) => {
   if (min < 0 || max < 0) {
     return -1;
@@ -13,4 +15,4 @@ const getRandomNumber = (min, max, digit = 0) => {
     : ((Math.random() * (max - min + min)) + min).toFixed(digit);
 };
 
-export default getRandomNumber;
+export { getRandomNumber, MAX_QUESTIONS };

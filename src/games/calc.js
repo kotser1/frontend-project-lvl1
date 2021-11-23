@@ -16,7 +16,7 @@ const getCalcGameData = () => {
   const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
 
-  const answer = Actions[randomOperator](randomNumber1, randomNumber2).toString();
+  const answer = Actions[randomOperator](randomNumber1, randomNumber2);
 
   return [question, answer];
 };

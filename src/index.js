@@ -12,7 +12,7 @@ const playGame = (rules, getGameData) => {
   for (let i = 0; i < MAX_QUESTIONS; i += 1) {
     const [question, answer] = getGameData();
 
-    console.log('Question: ', question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === answer.toString()) {
